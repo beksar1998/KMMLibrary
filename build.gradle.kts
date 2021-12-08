@@ -12,6 +12,7 @@ buildscript {
 
 allprojects {
     repositories {
+        gradlePluginPortal()
         google()
         mavenCentral()
     }

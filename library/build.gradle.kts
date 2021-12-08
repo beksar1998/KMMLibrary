@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "io.github.beksar1998"
-version = "0.0.1"
+version = "0.0.2"
 
 repositories {
     mavenCentral()
@@ -16,6 +16,10 @@ kotlin {
     iosX64()
     iosArm64()
     //iosSimulatorArm64() sure all ios dependencies support this target
+
+    android {
+        publishLibraryVariants("release", "debug")
+    }
 
     cocoapods {
         summary = "Some description for the Shared Module"

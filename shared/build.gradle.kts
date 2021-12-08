@@ -23,14 +23,23 @@ kotlin {
     }
     
     sourceSets {
-        val commonMain by getting
+        val commonMain by getting {
+             dependencies {
+                 implementation("io.github.katerinapetrova:mpp-sample-lib:1.0.0")
+//                 implementation("io.github.beksar1998:library:0.0.1")
+             }
+        }
         val commonTest by getting {
             dependencies {
                 implementation(kotlin("test-common"))
                 implementation(kotlin("test-annotations-common"))
             }
         }
-        val androidMain by getting
+        val androidMain by getting {
+            dependencies {
+//                implementation ("io.github.beksar1998:kmmlibrary:0.0.1")
+            }
+        }
         val androidTest by getting {
             dependencies {
                 implementation(kotlin("test-junit"))
